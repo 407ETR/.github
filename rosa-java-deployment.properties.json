@@ -1,0 +1,11 @@
+{
+    "name": "Rosa java deploy",
+    "description": "java deploy template",
+    "iconName": "example-icon",
+    "categories": [
+        "Java"
+    ],
+    "filePatterns": [
+        "pom.xml"
+    ]
+}

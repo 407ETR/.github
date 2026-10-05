@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: 407ETR/config-gha/.github/workflows/java-deployment.yml@main
+    with:
+      namespace: lab
+      app-profile: springboot-api
+      skip-deployment: ${{ github.event_name == 'pull_request' }}
+    secrets: inherit
